@@ -4255,10 +4255,10 @@ textarea.form-control-lg {
   width: 100%;
 }
 
-.tab-content > .tab-pane {
+.tab-content > .tab-pane, .tab-content2 > .tab-pane  {
   display: none;
 }
-.tab-content > .active {
+.tab-content > .active, .tab-content2 > .active {
   display: block;
 }
 
@@ -14588,6 +14588,10 @@ textarea.form-control-lg {
 .tab-content {
   padding: 25px 0;
   margin-bottom: 20px;
+}
+.tab-content2 {
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .nav-tabs .nav-link {
