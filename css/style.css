@@ -3669,6 +3669,7 @@ textarea.form-control-lg {
 }
 .fade:not(.show) {
   opacity: 0;
+  display:none;
 }
 
 .collapse:not(.show) {
