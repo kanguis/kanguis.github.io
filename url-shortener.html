@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Discount Hari ini- JavaScript</title>
+	<title>URL Shortener- JavaScript</title>
 
 	<!-- Meta Tags -->
 	<meta charset="utf-8">
@@ -11,11 +11,11 @@
 	<meta name="description" content="Tutorial Blog Kang Ismet">
 	
 	<!-- Open graph -->
-	<meta property="og:url" content="https://tutorial.kang-ismet.com/discount.html" />
+	<meta property="og:url" content="https://tutorial.kang-ismet.com/url-shortener.html" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content="Demo Tutorial Blog Kang Ismet" />
 	<meta property="og:description" content="Tutorial Bootstrap, JavaScript, jQuery, dll " />
-	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/discount.jpg" />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/shortener.jpg" />
 
 	<!-- Dark mode -->
 	<script>
@@ -335,65 +335,41 @@ Header END -->
 		  
 
 <div class="tab-content2" id="myTabContent">
-
-<!-- Result START -->
-  <div class="tab-pane fade show active text-center" id="result" role="tabpanel" aria-labelledby="result-tab">
-  	<div class='box'>
-		<h3>Harga Normal Rp. 250.000,-</h3>
-		<p>Pesan sebelum <span class='red'><script>
-today=new Date();todayInMillisecs=today.getTime();milsecsInADay=1000*60*60*24;mydate=new Date(1*milsecsInADay+todayInMillisecs);var year=mydate.getYear();if (year < 1000)year+=1900;var day=mydate.getDay();var month=mydate.getMonth();var daym=mydate.getDate();if (daym<10)daym='0'+daym;var dayarray=new Array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'); var montharray=new Array
-('Januari','Pebruari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','Nopember','Desember');document.write('<b>'+dayarray[day]+', '+daym+' '+montharray[month]+'  '+year+'</B>');    
-</script></span> pukul <span class='red'><b>18.00</b></span> WIB, bukan <span class='red'><b>Rp. 250.000,-</b></span>.
-Kami akan discount, dan Anda cukup mentransfer sebesar:</p>
-		<span class='red'><h4>Rp. 99.900,-</h4></span>
-	</div>
+  <div class="tab-pane fade show active" id="result" role="tabpanel" aria-labelledby="result-tab">
+  <p>arahkan mouse pada salah satu link di bawah ini, dan lihat link yang muncul di kiri bawah</p>
+  	<ul>
+		<li><a href="https://tutorial.kang-ismet.com/go/amp" target="_blank">AMP HTML</a>
+		<li><a href="https://tutorial.kang-ismet.com/go/js" target="_blank">JavaScript</a>
+		<li><a href="https://tutorial.kang-ismet.com/go/github" target="_blank">GitHub</a>
+	</ul>	
   </div>
-  <!-- Result END -->
   
-  <!-- CSS START -->
   <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="css-tab">
-	<pre><code class="language-css">.box {
-  background:#fcffb1;
-  border:1px solid #d9dc74;
-  padding:20px;
-  text-align:center;
-  color:#222;
-}
-.box h3 {
-  font-size:180%
-}
-.box h4 {
-  font-size:150%;
-}
-.red {
-  color:red
-}
-.box p {
-  line-height:1.6em
-}
-	</code></pre>
-  </div>
-  <!-- CSS END -->
   
-  <!-- HTML START -->
-  <div class="tab-pane fade" id="html" role="tabpanel" aria-labelledby="html-tab">
-  <pre clss="highlight"><code class="language-markup">&lt;div class='box'&gt;
-	&lt;h3&gt;Harga Normal Rp. 250.000,-&lt;/h3&gt;
-	&lt;p&gt;Pesan sebelum &lt;span class='red'&gt;&lt;script&gt;
-	today=new Date();todayInMillisecs=today.getTime();milsecsInADay=1000*60*60*24;mydate=new Date(1*milsecsInADay+todayInMillisecs);var year=mydate.getYear();if (year &lt; 1000)year+=1900;var day=mydate.getDay();var month=mydate.getMonth();var daym=mydate.getDate();if (daym&lt;10)daym='0'+daym;var dayarray=new Array('Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'); var montharray=new Array
-	('Januari','Pebruari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','Nopember','Desember');document.write('&lt;b&gt;'+dayarray[day]+', '+daym+' '+montharray[month]+'  '+year+'&lt;/B&gt;');    
-	&lt;/script&gt;&lt;/span&gt; pukul &lt;span class='red'&gt;&lt;b&gt;18.00&lt;/b&gt;&lt;/span&gt; WIB, bukan &lt;span class='red'&gt;&lt;b&gt;Rp. 250.000,-&lt;/b&gt;&lt;/span&gt;.
-	Kami akan discount, dan Anda cukup mentransfer sebesar:&lt;/p&gt;
-	&lt;span class='red'&gt;&lt;h4&gt;Rp. 99.900,-&lt;/h4&gt;&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-</div>
-<!-- HTML END -->
-
-<!-- JavaScript START -->
-  <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="js-tab">
-
   </div>
-  <!-- JavaScript END -->
+  
+  <div class="tab-pane fade" id="html" role="tabpanel" aria-labelledby="html-tab">
+  <pre><code class="language-html">&lt;ul&gt;
+   &lt;li&gt;&lt;a href="https://tutorial.kang-ismet.com/go/amp" target="_blank"&gt;AMP HTML&lt;/a&gt;
+   &lt;li&gt;&lt;a href="https://tutorial.kang-ismet.com/go/js" target="_blank"&gt;JavaScript&lt;/a&gt;
+   &lt;li&gt;&lt;a href="https://tutorial.kang-ismet.com/go/github" target="_blank"&gt;GitHub&lt;/a&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+  <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="js-tab">
+<pre><code class="language-javascript">var key = window.location.href.split(&quot;go/&quot;)[1].replace(&quot;/&quot;,&quot;&quot;)
+var urls={
+    &apos;amp&apos;:&apos;https://www.kang-ismet.com/search/label/AMPHTML&apos;, 
+    &apos;js&apos;:&quot;https://www.kang-ismet.com/search/label/Javascript&quot;,
+    &apos;github&apos;:&quot;https://www.kang-ismet.com/search/label/GitHub&quot; /* yang terakhir tanpa koma */
+}
+if(key){
+    if(urls[key]){
+        window.location.href=urls[key]
+    }else{
+        document.write(&quot;&apos;&quot;+key+&quot;&apos; not found :(&quot;);
+    }
+}</code></pre>
+  </div>
 </div>
 
     
@@ -403,7 +379,7 @@ Kami akan discount, dan Anda cukup mentransfer sebesar:</p>
 
     </div>
 	<div class="mx-auto mt-3" style="width: 700px;">
-			  	<a class="btn btn-outline-warning btn-sm" href="https://www.kang-ismet.com/2014/04/membuat-tanggal-dan-hari-besok-dengan-javascript.html">Tutorial</a></p>
+			  	<a class="btn btn-outline-warning btn-sm" href="https://www.kang-ismet.com/2014/08/membuat-url-shortener-sendiri-dengan-javascript.html">Tutorial</a></p>
 	</div>
    </div>
   <!-- Container END -->
@@ -420,15 +396,18 @@ JS libraries, plugins and custom scripts -->
 
 <!-- Seleksi Otomatis Pada Tag Pre -->
 <script>
-var pres = document.getElementsByTagName("pre");
-for (var i = 0; i < pres.length; i++) {
-  pres[i].addEventListener("dblclick", function () {
-    var selection = getSelection();
-    var range = document.createRange();
-    range.selectNodeContents(this);
-    selection.removeAllRanges();
-    selection.addRange(range);
-  }, false);
+var key = window.location.href.split("go/")[1].replace("/","")
+var urls={
+    'amp':'https://www.kang-ismet.com/search/label/AMPHTML', 
+    'js':"https://www.kang-ismet.com/search/label/Javascript",
+    'github':"https://www.kang-ismet.com/search/label/GitHub" /* yang terakhir tanpa koma */
+}
+if(key){
+    if(urls[key]){
+        window.location.href=urls[key]
+    }else{
+        document.write("'"+key+"' not found :(");
+    }
 }
 </script>
 <!-- Seleksi Otomatis Pada Tag Pre End -->
