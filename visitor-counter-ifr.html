@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Visitor Counter</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="Tutorial Blog Kang Ismet">
+	
+		<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+  <!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/prism.css">
+
+	<style>
+.box {
+  background:#fcffb1;
+  border:1px solid #d9dc74;
+  padding:20px;
+  text-align:center;
+  color:#222;
+}
+.box h3 {
+  font-size:180%
+}
+.box h4 {
+  font-size:150%;
+}
+.red {
+  color:red
+}
+.box p {
+  line-height:1.6em
+}
+</style>
+</head>
+<body>
+<!--Form Code Start Here-->
+<div class='box'>
+		<p>Halaman ini telah dibaca</p>
+<h1 id="count">0</h1>
+<p>kali</p>
+	</div>
+
+<script>
+function cb(response) {
+    document.getElementById('count').innerText = response.value;
+}
+</script>
+<script async src="https://api.countapi.xyz/hit/kang-ismet.com/visits?callback=cb"></script>
+</body>
+</html>
