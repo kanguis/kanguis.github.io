@@ -93,8 +93,9 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="css/lightbox.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="css/prism-light-2.css">
-	
+
 	 <style>
+	 body, main {background-color:#f8f8ff !important}
 /* cyrillic-ext */
 @font-face {
   font-family: 'Montserrat';
@@ -583,10 +584,26 @@ Header END -->
 	
 	<div class="container mt-4">
 		<div class="mx-auto" style="max-width: 750px;">
-<amp-iframe frameborder='0' height='1000' layout='fixed-height' resizable='resizable' sandbox='allow-forms allow-scripts allow-same-origin allow-modals allow-popups' src='https://komentardisqus.blogspot.com?shortname=blogkangismet&amp;fontBodyFamily=sans-serif&amp;fontLinkColor=2B0C93&amp;canonicalurl=https://www.kang-ismet.com/p/oot.html&amp;title=Forum%20Kang%20Ismet' title='Disqus Comments'>
-  <div aria-label='Disqus Comments' overflow='' role='button' tabindex='0'/>
-<amp-img height='1000' layout='fixed-height' placeholder='' src='https://2.bp.blogspot.com/-x1yVa6ztsWY/WyHFPLG0uLI/AAAAAAAAyIg/3C5Lb5EjGywOPzO_XSwK1XTu6VlBZE4SgCLcBGAs/s1600/back-iframe.png' width='auto'/>
-</amp-iframe>
+		<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+
+    var disqus_config = function () {
+    this.page.url = 'https://www.kang-ismet.com/p/oot.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = '/p/oot.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://blogkangismet.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
 		</div>
 	</div>	
 </main>
@@ -595,7 +612,6 @@ Header END -->
 <!-- =======================
 JS libraries, plugins and custom scripts -->
 
-<script async='async' custom-element='amp-iframe' src='https://cdn.ampproject.org/v0/amp-iframe-0.1.js'/>
 <script src="js/bootstrap.min.js"></script>
 
 </body>
