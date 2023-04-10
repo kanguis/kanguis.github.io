@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try It - HTML Live Editor</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="html live, live editor, w3school live editor" name="keywords">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="HTML Live Editor">
+
+	<!-- Open graph -->
+	<meta property="og:url" content="https://tutorial.kang-ismet.com/try-it.html" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Try It - HTML Live Editor" />
+	<meta property="og:description" content="Edit HTML Online" />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/try-it-editor.jpg" />
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+<style>
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main-editor {
+  background: #eee;
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+  position:fixed;
+  height:100vh;
+  justify-content: center;
+  align-items: center;
+  gap:20px;
+  position:relative;
+}
+
+.first {
+  margin-top:40px;
+  background-color: #ffffff;
+  width: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  white-space: pre;
+  outline: none;
+  padding: 0.6rem;
+  height: 85vh;
+  border:1px solid #ccc;
+  font-family: Monospace;
+  font-size:14px;
+  white-space: pre-wrap;
+}
+
+.second {
+  margin-top:40px;
+  background-color: #fff;
+  width: 50%;
+  overflow-y: auto;
+  white-space: pre;
+  right: 0;
+  border:1px solid #ccc;
+  padding: 0.4rem;
+  height: 85vh;
+}
+.btn svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+}
+svg.line, svg .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2.25;
+}
+.home{
+width:40px;
+height:40px;
+position:absolute;
+top:20px;
+left:20px;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    max-width: 200px;
+    padding: 0.6rem 1rem;
+    outline: 0;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #10ad80;
+    font-size: .8rem;
+	font-weight:bold;
+	font-weight:1.5rem
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	position:absolute;
+	top:15px;
+	left:70px;
+	cursor:pointer;
+}
+.btn:hover{
+   background: #08916a
+}
+.hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto}
+.hljs-comment,.hljs-meta{color:#969896}
+.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}
+.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}
+.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}
+.hljs-section,.hljs-name{color:#aa480d}.hljs-tag{color:#05579c}
+.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}
+.hljs-addition{color:#55a532;background-color:#eaffea}
+.hljs-deletion{color:#bd2c00;background-color:#ffecec}
+.hljs-link{text-decoration:underline}
+</style>
+
+</head>
+<body>
+
+<div class="main-editor">
+	<div class="home">
+		<a href="https://www.kang-ismet.com">
+			<svg viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M15.45,7L14,5.551V2c0-0.55-0.45-1-1-1h-1c-0.55,0-1,0.45-1,1v0.553L9,0.555C8.727,0.297,8.477,0,8,0S7.273,0.297,7,0.555  L0.55,7C0.238,7.325,0,7.562,0,8c0,0.563,0.432,1,1,1h1v6c0,0.55,0.45,1,1,1h3v-5c0-0.55,0.45-1,1-1h2c0.55,0,1,0.45,1,1v5h3  c0.55,0,1-0.45,1-1V9h1c0.568,0,1-0.437,1-1C16,7.562,15.762,7.325,15.45,7z"/></svg>
+		</a>
+	</div>	
+	<button class="btn">Run
+	<svg class='line' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000) translate(5.000000, 8.500000)'><path d='M14,0 C14,0 9.856,7 7,7 C4.145,7 0,0 0,0'></path></g></svg>
+	</button>
+<div  class="first" contenteditable>
+<pre><code class="hljs"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.box</span> { 
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">3px</span> solid green;
+  <span class="hljs-attribute">text-align</span>:center;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Try It Editor - by Kang Ismet<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Contoh objek:<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am inside a box.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+</div>
+	<iframe class="second" >
+	<h2>Centering</h2>
+<p>Contoh objek:</p>
+
+<div class="container">
+  <div class="center">
+    <p>I am vertically and horizontally centered.</p>
+  </div>
+</div>
+	</iframe>
+</div>
+
+<script>
+const first = document.querySelector(".first");
+const iframe = document.querySelector("iframe");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  var html = first.textContent;
+  iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+});
+
+
+first.addEventListener('keyup',()=>{
+  var html = first.textContent;
+  iframe.src = "data:text/html;charset=utf-8," + encodeURI(html);
+})
+
+first.addEventListener("paste", function(e) {
+        e.preventDefault();
+        var text = e.clipboardData.getData("text/plain");
+        document.execCommand("insertText", false, text);
+    });
+</script>
+
+</body>
+</html>
