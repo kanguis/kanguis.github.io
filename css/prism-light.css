@@ -13,11 +13,6 @@ font-style: normal !important;
 font-size: 14px !important;
 }
 code {
-color:#fc4c02;
-font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
-font-weight: normal !important;
-font-style: normal !important;
-font-size: 14px !important;
 }
 code .token.punctuation {
   color:#83405A;
