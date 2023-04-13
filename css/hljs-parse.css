@@ -1,0 +1,15 @@
+body {border: 0;font-family: Google Sans Text, sans-serif;font-size: 15px;font-weight: 400;margin: 0;outline: 0;padding: 0;}
+@font-face{font-family:'Google Sans Text';font-style:normal;font-weight:400;font-display:swap;src:local('Google Sans Text'),local('Google-Sans-Text'),url(https://fonts.gstatic.com/s/googlesanstext/v16/5aUu9-KzpRiLCAt4Unrc-xIKmCU5qEp2iw.woff2) format('woff2')} 
+#container {width:98%}
+#container::-webkit-scrollbar {height: 8px;}#container::-webkit-scrollbar-thumb{background: #5f6d90;}	
+.flex {display:flex}
+p input {float:left}
+code{background:#666;color:#fff;padding:5px}
+.rlt {position:relative}
+a:link,a:visited{color:#fa5742;text-decoration:none}
+a:hover{color:#404040;text-decoration:none}
+a:active,a:focus,i:active,i:focus{outline:0}
+label, code, #theme-selector {display:none}
+.refresh {background:#7a8dc3;color:#fff;display:inline-block;font-size:13px;padding:5px 12px;position:absolute;top:25px;right:25px;border-radius:5px;z-index:50;transition:all .3s ease-out}
+.refresh a {color:#fff;text-decoration:none}
+.refresh:hover {background:#5e70a6}
