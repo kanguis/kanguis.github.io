@@ -323,7 +323,8 @@ Header END -->
 <div class="container">
 		
     <div class="mx-auto mt-3" style="max-width: 700px;">
-     <video controls crossorigin playsinline data-poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpu6kuO1WjrozJLabsTHSI46tB2RQI1JUHiCv8rhumPzWlL27ndEUTgaDgTE8ocb1FHZmrrwzb3Q5KN-16dP9GIgRqBhe7IvtT8aCe8kIEmLqbiHrrvhFfgoNeZDC7gu48lUgwa6eA69NPj0pzk1QxGocgLtHIptIrxoJwCTyE5aqPo2L7FBiq_BYs/s700/adipurush.png" id="plyr-video">
+	<h5>Video HTML 5</h5>
+     <video class="js-player" controls crossorigin playsinline data-poster="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjpu6kuO1WjrozJLabsTHSI46tB2RQI1JUHiCv8rhumPzWlL27ndEUTgaDgTE8ocb1FHZmrrwzb3Q5KN-16dP9GIgRqBhe7IvtT8aCe8kIEmLqbiHrrvhFfgoNeZDC7gu48lUgwa6eA69NPj0pzk1QxGocgLtHIptIrxoJwCTyE5aqPo2L7FBiq_BYs/s700/adipurush.png">
 
 <source src="https://tutorial.kang-ismet.com/vid/adipurush-360.mp4" type="video/mp4" size="360"/>
 <source src="https://tutorial.kang-ismet.com/vid/adipurush-480.mp4" type="video/mp4" size="480" />
@@ -337,12 +338,26 @@ Header END -->
     
     </div>
 	
-	<div class="mx-auto mt-3" style="max-width: 700px;">
-	<h5>Adipurush (Official Trailer) Hindi | Prabhas | Saif Ali Khan | Kriti Sanon | Om Raut | Bhushan Kumar</h5>
-			  	<a class="btn btn-outline-warning btn-sm" href="https://www.kang-ismet.com/2023/05/plyr-html-5-video-player.html">Tutorial</a></p>
+	<div class="mx-auto mt-3" style="width: 700px;">
+	<a class="btn btn-outline-warning btn-sm" href="https://www.kang-ismet.com/2023/05/plyr-html-5-video-player.html">Tutorial</a></p>
 	</div>
 	
+	<div class="mx-auto mt-3" style="width: 700px;">
+	<h5>Youtube</h5>
+	<div class="js-player" data-plyr-provider="youtube" data-plyr-embed-id="8tea0uI4d2A"></div>
+    </div>
+	
 
+	
+	
+	<div class="mx-auto mt-3" style="width: 700px;">
+	<h5>Audio</h5>
+	<audio class='js-player' controls>
+  <source src="https://anchor.fm/s/5dbcf324/podcast/play/36986558/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-6-10%2Ff3e8b222-cf10-72c4-9ec9-9588d653b275.mp3" type="audio/mp3">
+</audio>
+    </div>
+		
+	</div>
    </div>
   <!-- Container END -->
 
@@ -356,7 +371,8 @@ JS libraries, plugins and custom scripts -->
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/kanguis/assets@main/js/plyr.js"></script>
 <script>
-const videoPlayer = new Plyr('#plyr-video');
+const players = Array.from(document.querySelectorAll('.js-player')).map(p => new Plyr(p));
+const plyrs = Array.from(document.querySelectorAll('.js-plyr')).map(plyrs => new Plyr(plyrs));
 </script>
 
 </body>
