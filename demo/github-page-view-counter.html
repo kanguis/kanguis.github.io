@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+<meta charset="UTF-8">
+<title>GitHub View Counter</title>
+<meta name="viewport" content="width=device-width">
+<link rel="shortcut icon" href="https://www.kang-ismet.com/favicon.ico">
+<style>
+body {margin:0;outline:0;padding:0;border:0;font-family:Montserrat,Arial, sans-serif;font-size: 16px;font-weight:500;background:#fff;}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_epG3gnD_g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+#top {height:80px;width:100%;background:#ffd739;position:fixed;top:0;right:0;left:0;z-index:50}
+.top-inner{max-width:560px;line-height:80px;margin:0 auto;text-align:center}
+#luhur{height:110px}
+#main-wrapper {max-width:780px;background:#fff;margin:100px auto}
+.button {background:#12299b;padding:12px 20px;border-radius:4px;text-transform:uppercase;margin-left:20px;font-size:14px}
+a.button {color:#fff;text-decoration:none}
+a.button:hover {background:#0d2187}
+.button2 {background:#2d67f7;padding:12px 20px;border-radius:4px;text-transform:uppercase;margin-left:20px;font-size:14px}
+a.button2 {color:#fff;text-decoration:none}
+a.button2:hover {background:#2156d9}
+
+article {background:#fff;color:#777;padding:30px;text-align:left;font-size:14px; font-weight:normal}
+article h2 {color:#111}
+article p{line-height:1.8em}
+.dummyText i{display: block;background-color: rgba(0,0,0,.05);margin-bottom: 10px;height: 1.5em;}
+.first{margin-left:10%}
+.last{width:40%}
+.dummyText i.img {height: auto;min-height: 200px;margin: 2rem 10%;}
+.comment {display:flex;margin-top:15px;flex-basis: 100%;}
+.comment img {height:50px; width:50px; border-radius:50px;margin-right:20px}
+.comment .content {display: flex;flex-wrap: wrap;}
+.comment .user{font-weight:600;margin-top:-2px}
+.comment p{margin-top:-8px}
+.time {font-weight:400;font-size:11px;color:blue}
+.comment a{text-decoration: none;}
+.dummyComment{margin-top:15px;margin-bottom:30px}
+.imgDummy {float: left;height:50px; width:50px;min-height:50px; border-radius:50px;margin-right:20px;background-color: rgba(0,0,0,.05);}
+.dummyComment i{display: block;background-color: rgba(0,0,0,.05);margin-bottom: 10px;margin-left:70px;height: 1em;}
+#secondcomment{margin-left:10%}
+footer {background:#9696be;color:#fff;padding:20px;text-align:center;font-size:12px}
+footer a {color:#f3f3f9;text-decoration:none}
+footer a:hover {color:#333}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="top">
+  <div class='top-inner'><a class='button' href='https://www.kang-ismet.com/2024/03/github-view-counter.html'>Tutorial</a></div>
+</div>
+
+<div id="main-wrapper">
+  <article>
+  <p><a href="test-view3.html">Reload</a> untuk melihat efeknya.</p>
+ 
+<span class='post-view' data-id='1234567'>
+    Artikel ini telah dibaca sebanyak
+    <span class='view-load' id='postviews'></span> kali
+</span>
+
+  <p class="dummyText">
+	<i class="first"></i>
+	<i></i>
+	<i></i>
+	<i class="last"></i>
+	<i class="img"></i>
+	<i class="first"></i>
+	<i></i>
+	<i class="last"></i>
+  </p>
+    <br/><br/>
+
+  <div class="comment" id="firstcomment">
+	<img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="jhon"/>
+	<div class="content">
+		<p class="user">Jhon Doe - <a class="time" href="#firstcomment">4 hours ago</a> </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		<p class="time">Reply</p>
+	</div>
+  </div>
+  <div class="comment" id="secondcomment">
+	<img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(11).webp" alt="Simona"/>
+	<div class="content">
+		<p class="user">Simona Disa - <a class="time" href="#secondcomment">2 minutes ago</a> </p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+		<p class="time">Reply</p>
+	</div>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <a href="#main-wrapper">Kembali ke atas</a>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>	
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  <div class="dummyComment">
+	<div class="imgDummy"></div>
+		<i></i>
+		<i></i>
+		<i></i>
+  </div>
+  
+  
+  </article>  
+</div> 
+<footer>
+  <a href="https://kang-ismet.com">Kang Ismet</a> All Right Reserved
+  </footer> 
+<script type='text/javascript'>
+//<![CDATA[
+// Tentukan ID fixed heder-nya
+var headerHeight = $("#top").height();
+
+// Click event
+$('a[href*=#]').bind("click", function(e) {
+    
+    var target = $(this).attr("href"); //Mendapatkan target
+    var scrollToPosition = $(target).offset().top - headerHeight;
+    
+    $('html').animate({ 'scrollTop': scrollToPosition }, 600, function(target){
+        window.location.hash = target;
+    });
+    
+    e.preventDefault();
+});
+//]]>
+</script>
+
+<script>
+//<![CDATA[
+document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdn.firebase.com/js/client/2.4.2/firebase.js\"></scr" + "ipt>");
+//]]>
+</script>	
+<script>
+    $.each($(".post-view[data-id]"), function(a, e) {
+        var l = $(e).parent().find("#postviews").addClass("view-load"),
+            i = new Firebase("https://assaef-1-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
+        i.once("value", function(a) {
+            var n = a.val(),
+                t = !1;
+            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
+        })
+    });
+</script> 
+
+</body>
+
+</html>
+
