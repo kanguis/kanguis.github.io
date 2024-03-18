@@ -34,7 +34,78 @@
 	@media screen and (min-width:768px){
 ::-webkit-scrollbar{-webkit-appearance:none;width:8px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.35)}::-webkit-scrollbar-thumb:active{background:rgba(0,0,0,.35)}
 }
+footer{background:#1b1b27;color:#72727f}
+footer a{color:#afafbf;text-decoration:none}
+
+.loading{left:40px;top:20px;position:absolute;}
+.container {position:relative;}
+#feed-list-container{position:relative;min-height:250px}
+
+.toTopB.vsbl {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.toTopB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(0);
+    transition: transform .3s ease, opacity .3s ease,visibility .3s ease,margin-bottom 1s ease;
+}
+.toTopB svg .b {
+    fill: #fff;
+    stroke: #e6e6e6;
+    opacity: .9;
+}
+.toTopB svg .c {
+    fill: none;
+    stroke: #482dff;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+	display:none
+}
+.toTopB svg .d {
+    fill: none;
+    stroke: #08102b;
+}
+svg.line, svg .line {
+    fill: none!important;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+}
+
+element.style {
+}
+.toTopB svg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+#ScrollToTop{display:none}
 	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
+$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
+</script>
 </head>
 <body>
 
@@ -83,7 +154,15 @@
 				<span class="nav-item ms-2 fw-bold">kismt.</span></a>
 			</a>
 		<!-- Logo END -->
-
+		<ul class="navbar-nav navbar-nav-scroll">
+					<li class="nav-item">
+						<a class="nav-link" href="https://kang-ismet.com">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./tool/">Tool</a>
+					</li>
+		</ul>
+		</div>
 </nav>
 </header>
 
@@ -105,6 +184,7 @@
 
 <div class="py-5">
   <div class="container">
+  <div class="loading">Loading...</div>
 <div id="feed-list-container"></div><div style="clear: both;"></div>
 <script type="text/javascript">
 var multiFeed = {
@@ -154,10 +234,22 @@ var multiFeed = {
     }
 };
 </script><br />
-<script src="js/multi-feed.js" type="text/javascript"></script>
+<script src="js/multi-feed.js" type="text/javascript"></script>	
 </div>
 </div>
 </main>
+
+
+  <footer class="pt-3 pb-1 mt-4">
+    <p class="text-center">© 2024 <a href="https://kang-ismet.com">Kang Ismet</a></p>
+	<div id="ScrollToTop" class="toTopB vsbl">
+<svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
+</div>
+  </footer>
+<script>
+function toastNotif(e){var tNotif = qSel('#toastNotif'); if (tNotif != null){tNotif.innerHTML = '<span>' + e + '</span>'}}; /* fixedNotif */ function fixedNotif(e){var fNotif = qSel('#fixedNotif'); if (fNotif != null){fNotif.innerHTML = "<input class='nJs hidden' id='forFxdNtf' type='checkbox'/><div class='noJs' data-text='" + e + "'><label for='forFxdNtf'></label></div>"}}; /* neonLight */ function neonLight(e){var neonL = qSel('#neonLight'); if (neonL != null) {addCt(neonL, 'vsbl'); setTimeout(function (){remCt(neonL, 'vsbl')},e+1000)}};
+</script>
+
 </body>
 </html>
 
