@@ -1,0 +1,18 @@
+/* Basic Skin for Multi Feed Loader */
+  #feed-list-container {padding-left:15px}
+.list-entries{background:white;border:1px solid #d8d8d8}.list-entries ul,.list-entries li{margin:0;padding:0;list-style:none}.list-entries li{padding:1em;border-bottom:1px solid #ddd}.list-entries .main-title{padding:0}.list-entries .main-title h4{display:block;font:inherit;font-weight:bold;padding:.5em 1em;background-color:#4f93c5;color:#fff;margin:0;line-height:normal;font-size:16px;margin-top:0 !important}.list-entries .title a{font-weight:400;font-size:14px;text-decoration:none;line-height:1.2em;color:#222}.list-entries .title a:hover{text-decoration:underline;color:#5886a7}.list-entries img,.list-entries .fake-img{border:none;background-color:#333;margin:0 1em 0 0;padding:0;float:left}.list-entries .summary{overflow:hidden;color:#999}.list-entries .more-link{border-bottom:none;}.list-entries .more-link a{display:block;line-height:1.5em;height:auto;overflow:hidden;text-decoration:none;background-color:#82b965;padding:.5em 1em;position:relative;font-weight:400;color:white;font-size:.9rem}.list-entries .more-link a:after{content:"";width:0;height:0;position:absolute;top:50%;right:.3em;border:4px solid transparent;border-left-color:white;margin-top:-4px}.list-entries .more-link a:hover{background-color:#71a555}
+/* Custom CSS */
+ @media screen and (max-width:2000px) {
+ .list-entries{
+  margin:10px;
+  width:30%; /* Lebar widget */
+  float:left;
+  font-size:14px;}
+  }
+  @media screen and (max-width:600px) {
+ .list-entries{
+  width:60%; /* Lebar widget */
+  }
+ @media screen and (max-width:570px) {
+ .list-entries{width:90%}
+ }
