@@ -1,1 +1,205 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tutorial Kang Ismet</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="Tutorial Blog Kang Ismet">
+	
+	<!-- Open graph -->
+	<meta property="og:url" content="https://tutorial.kang-ismet.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tutorial Blog Kang Ismet" />
+	<meta property="og:description" content="Tutorial Bootstrap, JavaScript, jQuery, dll " />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/kismt-thumb.jpg" />
+
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../img/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+
+ 
+  <!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/tutorial.css">
+	<link rel="stylesheet" type="text/css" href="../css/feed-loader.css">
+	<style>
+	@media screen and (min-width:768px){
+::-webkit-scrollbar{-webkit-appearance:none;width:8px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.35)}::-webkit-scrollbar-thumb:active{background:rgba(0,0,0,.35)}
+}
+footer{background:#1b1b27;color:#72727f}
+footer a{color:#afafbf;text-decoration:none}
+
+.loading{left:40px;top:20px;position:absolute;}
+.container {position:relative;}
+#feed-list-container{position:relative;min-height:250px}
+
+.toTopB.vsbl {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.toTopB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(0);
+    transition: transform .3s ease, opacity .3s ease,visibility .3s ease,margin-bottom 1s ease;
+}
+.toTopB svg .b {
+    fill: #fff;
+    stroke: #e6e6e6;
+    opacity: .9;
+}
+.toTopB svg .c {
+    fill: none;
+    stroke: #482dff;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+	display:none
+}
+.toTopB svg .d {
+    fill: none;
+    stroke: #08102b;
+}
+svg.line, svg .line {
+    fill: none!important;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+}
+
+element.style {
+}
+.toTopB svg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+#ScrollToTop{display:none}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
+$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
+</script>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <form action="https://formsubmit.co/72a62e32433f28c016e24c462f48f30c" method="POST" onsubmit="return submitUserForm();">
+  <input name="_subject" type="hidden" value="Pesan di Form Cantact!" />
+<input name="_captcha" type="hidden" value="false" />
+<input name="_next" type="hidden" value="https://tutorial.kang-ismet.com/thanks.html" />
+    <div class="form-group">
+      <div class="form-row d-flex"> 
+        <div class="col me-2 mb-2">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col mb-2">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="navbar-light fixed-top header-static bg-mode">
+<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-lg-5">
+		<!-- Logo START --> 
+			<a class="navbar-brand d-flex" href="index.html">
+				<img class="light-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">	
+				<span class="nav-item ms-2 fw-bold">kismt.</span></a>
+			</a>
+		<!-- Logo END -->
+		<ul class="navbar-nav navbar-nav-scroll">
+					<li class="nav-item">
+						<a class="nav-link" href="https://kang-ismet.com">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../tool/">Tool</a>
+					</li>
+		</ul>
+		</div>
+</nav>
+</header>
+
+<main class="pt-5">
+
+<!-- Page header START -->
+  <div class="py-5" style="background-image:url(../img/bg2.jpg); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+	<div class="container">
+      <div class="row justify-content-center py-5">
+        <div class="col-md-6 text-center">
+        <!-- Title -->
+        <h1 class="text-white">	Code <i class="fa-solid fa-code"></i> is Pretty</h1>
+        <p class="mb-4 text-white">when an idea was coming to you</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page header END -->
+
+<div class="py-5">
+	<div class="container">
+
+	</div>
+</div>
+</main>
+
+
+  <footer class="pt-3 pb-1 mt-4">
+    <p class="text-center">© 2024 <a href="https://kang-ismet.com">Kang Ismet</a></p>
+	<div id="ScrollToTop" class="toTopB vsbl">
+<svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
+</div>
+  </footer>
+<script>
+function toastNotif(e){var tNotif = qSel('#toastNotif'); if (tNotif != null){tNotif.innerHTML = '<span>' + e + '</span>'}}; /* fixedNotif */ function fixedNotif(e){var fNotif = qSel('#fixedNotif'); if (fNotif != null){fNotif.innerHTML = "<input class='nJs hidden' id='forFxdNtf' type='checkbox'/><div class='noJs' data-text='" + e + "'><label for='forFxdNtf'></label></div>"}}; /* neonLight */ function neonLight(e){var neonL = qSel('#neonLight'); if (neonL != null) {addCt(neonL, 'vsbl'); setTimeout(function (){remCt(neonL, 'vsbl')},e+1000)}};
+</script>
+
+</body>
+</html>
+
