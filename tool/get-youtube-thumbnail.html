@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Get Youtube Thumbnail</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="Tutorial Blog Kang Ismet">
+	
+	<!-- Open graph -->
+	<meta property="og:url" content="https://tutorial.kang-ismet.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tutorial Blog Kang Ismet" />
+	<meta property="og:description" content="Tutorial Bootstrap, JavaScript, jQuery, dll " />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/kismt-thumb.jpg" />
+
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../img/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+
+ 
+  <!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/tutorial.css">
+	<link rel="stylesheet" type="text/css" href="../css/feed-loader.css">
+	<style>
+	@media screen and (min-width:768px){
+::-webkit-scrollbar{-webkit-appearance:none;width:8px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.35)}::-webkit-scrollbar-thumb:active{background:rgba(0,0,0,.35)}
+}
+footer{background:#1b1b27;color:#72727f}
+footer a{color:#afafbf;text-decoration:none}
+
+.loading{left:40px;top:20px;position:absolute;}
+.container {position:relative;}
+#feed-list-container{position:relative;min-height:250px}
+
+.toTopB.vsbl {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.toTopB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(0);
+    transition: transform .3s ease, opacity .3s ease,visibility .3s ease,margin-bottom 1s ease;
+}
+.toTopB svg .b {
+    fill: #fff;
+    stroke: #e6e6e6;
+    opacity: .9;
+}
+.toTopB svg .c {
+    fill: none;
+    stroke: #482dff;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+	display:none
+}
+.toTopB svg .d {
+    fill: none;
+    stroke: #08102b;
+}
+svg.line, svg .line {
+    fill: none!important;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+}
+
+element.style {
+}
+.toTopB svg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+#ScrollToTop{display:none}
+
+input[type=text]:hover {border-color:#1c3659}
+input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16px;border-radius:7px;border:1px solid #91969d;font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
+    @media screen and (max-width:640px){.widget input[type=text]{display:block;width:100%}}
+
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
+$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
+</script>
+</head>
+<body>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+  <form action="https://formsubmit.co/72a62e32433f28c016e24c462f48f30c" method="POST" onsubmit="return submitUserForm();">
+  <input name="_subject" type="hidden" value="Pesan di Form Cantact!" />
+<input name="_captcha" type="hidden" value="false" />
+<input name="_next" type="hidden" value="https://tutorial.kang-ismet.com/thanks.html" />
+    <div class="form-group">
+      <div class="form-row d-flex"> 
+        <div class="col me-2 mb-2">
+          <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="col mb-2">
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+  </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="navbar-light fixed-top header-static bg-mode">
+<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-lg-5">
+		<!-- Logo START --> 
+			<a class="navbar-brand d-flex" href="https://kang-ismet.com">
+				<img class="light-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">	
+				<span class="nav-item ms-2 fw-bold">kismt.</span></a>
+			</a>
+		<!-- Logo END -->
+		<ul class="navbar-nav navbar-nav-scroll">
+					<li class="nav-item">
+						<a class="nav-link" href="https://kang-ismet.com">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://tutorial.kang-ismet.com">Tutorial</a>
+					</li>
+		</ul>
+		</div>
+</nav>
+</header>
+
+<main class="pt-5">
+
+<!-- Page header START -->
+  <div class="py-4" style="background-image:url(../img/bgyt4.jpg); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+	<div class="container">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-6 text-center">
+        <!-- Title -->
+        <h1 class="text-white">	Get YouTube Thumbnail</h1>
+        <p class="mb-4 text-white">mengambil thumbnail youtube</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page header END -->
+
+<div class="py-5">
+	<div class="container">
+		<div class="my-3 text-center">
+  <div class="text-center">
+<p>Untuk mendapatkan Youtube Thumbnail<br />
+    masukan URL video pada kotak dibawah.</p>
+<p>Contoh URL video seperti ini:<br />
+    <em>https://www.youtube.com/watch?v=erLk59H86ww</em></p>
+<p>
+    <input type="text" class="text" id="youtubeLink" size="55" />
+</p>
+<p>
+    <button id="get" class="btn btn-danger">
+    Get YouTube Thumbnail
+    </button>
+</p>
+</div>
+<div class="text-center" id="msg"></div>
+
+<script>
+
+$("#get").click(function () {
+   var ytl = $( "#youtubeLink" ).val();
+   var yti = ytl.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+   $( "#msg" ).html( "<h2>YouTube Thumbnail</h2><h3>Max resolution (1080p and above):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/maxresdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/maxresdefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>HD (720p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/sddefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/sddefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>Standard quality (480p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/hqdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/hqdefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>Medium (360p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/mqdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/mqdefault.jpg\" onclick=\"this.select()\" readonly /></p>" );
+   
+});
+
+
+$("#copyimageURL").click(function () {
+   $(this).select();
+});
+
+</script>
+  </div>
+	</div>
+</div>
+</main>
+
+
+  <footer class="pt-3 pb-1 mt-4">
+    <p class="text-center">© 2024 <a href="https://kang-ismet.com">Kang Ismet</a></p>
+	<div id="ScrollToTop" class="toTopB vsbl">
+<svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
+</div>
+  </footer>
+<script>
+function toastNotif(e){var tNotif = qSel('#toastNotif'); if (tNotif != null){tNotif.innerHTML = '<span>' + e + '</span>'}}; /* fixedNotif */ function fixedNotif(e){var fNotif = qSel('#fixedNotif'); if (fNotif != null){fNotif.innerHTML = "<input class='nJs hidden' id='forFxdNtf' type='checkbox'/><div class='noJs' data-text='" + e + "'><label for='forFxdNtf'></label></div>"}}; /* neonLight */ function neonLight(e){var neonL = qSel('#neonLight'); if (neonL != null) {addCt(neonL, 'vsbl'); setTimeout(function (){remCt(neonL, 'vsbl')},e+1000)}};
+</script>
+
+</body>
+</html>
+
