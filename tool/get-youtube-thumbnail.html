@@ -187,6 +187,14 @@ $("#copyimageURL").click(function () {
   </div>
 	</div>
 </div>
+
+	<div class="py-2">
+	<div class="container text-center">
+	<span class='post-view' data-id='2'>
+	<code><b><span class='view-load' id='postviews'></span></b> Views since March 20, 2024</code>
+	</span>
+	</div>
+</div>
 </main>
 
 
@@ -202,6 +210,22 @@ $(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#S
 $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
 //]]>
 </script>
+<script>
+//<![CDATA[
+document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdn.firebase.com/js/client/2.4.2/firebase.js\"></scr" + "ipt>");
+//]]>
+</script>	
+<script>
+    $.each($(".post-view[data-id]"), function(a, e) {
+        var l = $(e).parent().find("#postviews").addClass("view-load"),
+            i = new Firebase("https://assaef-1-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
+        i.once("value", function(a) {
+            var n = a.val(),
+                t = !1;
+            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
+        })
+    });
+</script> 
 </body>
 </html>
 
