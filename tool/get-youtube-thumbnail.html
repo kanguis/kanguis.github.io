@@ -107,10 +107,7 @@ input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16p
 
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script type='text/javascript'>
-$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
-$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
-</script>
+
 </head>
 <body>
 
@@ -206,8 +203,8 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
 </div>
 <div class="text-center" id="msg"></div>
 
-<script>
-
+<script type='text/javascript'>
+//<![CDATA[
 $("#get").click(function () {
    var ytl = $( "#youtubeLink" ).val();
    var yti = ytl.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
@@ -219,7 +216,7 @@ $("#get").click(function () {
 $("#copyimageURL").click(function () {
    $(this).select();
 });
-
+//]]>
 </script>
   </div>
 	</div>
@@ -233,7 +230,12 @@ $("#copyimageURL").click(function () {
 <svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
 </div>
   </footer>
-
+<script type='text/javascript'>
+//<![CDATA[
+$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
+$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
+//]]>
+</script>
 </body>
 </html>
 
