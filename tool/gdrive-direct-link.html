@@ -101,6 +101,7 @@ element.style {
 }
 #ScrollToTop{display:none}
 .notes{background:#fff;padding:15px}
+.notes1{background:#fff;padding:10px}
 .notes ul li{line-height:1.6em;margin-bottom:8px;}
 input[type=text]:hover {border-color:#1c3659}
 input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16px;border-radius:7px;border:1px solid #91969d;font-family:SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;}
@@ -108,9 +109,29 @@ input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16p
 
 .link-generate {font-family: 'Roboto Condensed', sans-serif;}
 .title {font-size: 1.4em;margin: 15px 0 10px;}
-.sub {font-size: 0.5em;color: #444;vertical-align: middle;}
+.sub {font-size: 0.6em;color: #444;vertical-align: middle;}
+.sub a{color: #444;text-decoration:none}
 #input, #output {font-size: .9em;display:block;width:100%;padding: 8px 13px;border: 1px solid #b5b5b5;border-radius: 3px;}
 #help-text {font-weight: 600;margin: 10px;}
+.instr{background:#1a3c3b}
+
+.img-center{text-align:center;margin:0 auto;}
+.img-left{clear:left;float:left;margin-bottom:1em;margin-right:1em;text-align:left;}
+.img-right{clear:right;float:right;margin-bottom:1em;margin-left:1em;text-align:right;}
+.img-border {border:1px solid #ddd}
+.img-200,.img-300,.img-400,.img-500,.img-600{width:100%;text-align:center;clear:both}
+.img-200{max-width:200px;}
+.img-300{max-width:300px;}
+.img-400{max-width:400px;}
+.img-500{max-width:500px;}
+.img-600{max-width:600px;}
+.img-caption{display: block;margin-top: 5px;font-size: small;line-height: 1.3;opacity: .6;font-style:italic}
+@media screen and (max-width:640px){
+.img-500.img-left,.img-500.img-right,.img-600.img-left,.img-600.img-right{clear:both;float:none;margin:1em auto;text-align:center;}
+}
+@media screen and (max-width:414px){
+.img-200.img-left,.img-200.img-right,.img-300.img-left,.img-300.img-right,.img-400.img-left,.img-400.img-right{clear:both;float:none;margin:1em auto;text-align:center;}
+}
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script type='text/javascript'>
@@ -124,7 +145,7 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
 <nav class="navbar navbar-expand-lg">
 		<div class="container-fluid px-lg-5">
 		<!-- Logo START --> 
-			<a class="navbar-brand d-flex" href="https://kang-ismet.com">
+			<a class="navbar-brand d-flex" href="https://tutorial.kang-ismet.com/tool/">
 				<img class="light-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">	
 				<span class="nav-item ms-2 fw-bold">kismt.</span></a>
@@ -219,19 +240,15 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
             }
         }
     </script>
-    <div class="title">Enter your sharing URL:&nbsp;<span class="sub">(Scroll down for instructions)</span></div>
+    <div class="title">Enter your sharing URL:&nbsp;<span class="sub">(<a href="#instr">Click Here for Instructions</a>)</span></div>
+	<p>Your URL should look like this<br/>
+	<code>https://drive.google.com/file/d/1LDRlyZaZTF-bxHjBDEiL2obMxYHtf3YT/view?usp=sharing</code><p>
     <input id="input" type="text">
     <button id="button" class="btn btn-danger mt-3">Create Direct Link</button>
     <div class="title">Output link:</div>
     <input id="output" type="text" readonly="" disabled="">
     <div id="help-text"></div>
-	<div class="notes mt-5">
-	<h3>Instructions</h3>
-	<ol>
-	<li>How to Get Your Sharing URL</li>
-	<li>How Does it Work?</li>
-	</ol>
-	</div>
+
 </div>
                 </div>
                 <div class="col-lg-4 notes">
@@ -241,21 +258,50 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
 					<li>This only works for uploaded files, not documents created in Google Docs/Sheets/Slides.</li>
 					<li>If your file is very large, the direct link may first open a page saying that the file is too large for Google to scan for viruses. That page will have a button to download the file.</li>
 					</ul>
+					<div id="instr"></div>
                 </div>
             </div>
         </div>
     </div>
+	 
     <!-- KOmite End -->
 
+<div class="py-5 instr">
+	<div class="container text-center">
+	<h1 class="text-white">How to Get Your Sharing URL</h1>
+	</div>
+</div>
 <div class="py-5">
-	<div class="container">
-	
-	
-	
-		<div class="my-3 text-center">
+	<div class="container text-center">
+		<div class="notes1">
+			<b>Step 1</b>: Go to <b>Google Drive</b> and right click the file that you want to share, then click on "Share"
+		</div>
+		<div class="img-600 img-center mt-4 border">
+			<img alt="google drive" src="../img/gdrive1.jpg"/>
+		</div>
+		<div class="notes1 mt-5">
+			<b>Step 2</b>: In the window that comes up, change the access to "Anyone with the link"
+		</div>
+		<div class="img-500 img-center mt-4 border">
+			<img alt="google drive" src="../img/gdrive2.jpg"/>
+		</div>
+		<div class="notes1 mt-5">
+			<b>Step 3</b>: Click "Copy link"
+		</div>
+		<div class="img-500 img-center mt-4 border">
+			<img alt="google drive" src="../img/gdrive3.jpg"/>
+		</div>
+		<div class="notes1 mt-5">
+			<b>Step 4</b>: Paste that link into the text box above and click "Create Direct Link" to create your link. Enjoy!
+		</div>
+	</div>
+</div>
 
-
-  </div>
+<div class="py-2">
+	<div class="container text-center">
+	<span class='post-view' data-id='4'>
+	<code><b><span class='view-load' id='postviews'></span></b> Views since March 20, 2024</code>
+	</span>
 	</div>
 </div>
 </main>
@@ -267,6 +313,23 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
 <svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
 </div>
   </footer>
+
+<script>
+//<![CDATA[
+document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdn.firebase.com/js/client/2.4.2/firebase.js\"></scr" + "ipt>");
+//]]>
+</script>	
+<script>
+    $.each($(".post-view[data-id]"), function(a, e) {
+        var l = $(e).parent().find("#postviews").addClass("view-load"),
+            i = new Firebase("https://assaef-1-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
+        i.once("value", function(a) {
+            var n = a.val(),
+                t = !1;
+            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
+        })
+    });
+</script> 
 
 </body>
 </html>
