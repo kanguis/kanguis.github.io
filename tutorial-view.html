@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tutorial Kang Ismet</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="Tutorial Blog Kang Ismet">
+	
+	<!-- Open graph -->
+	<meta property="og:url" content="https://tutorial.kang-ismet.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Tutorial Blog Kang Ismet" />
+	<meta property="og:description" content="Tutorial Bootstrap, JavaScript, jQuery, dll " />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/kismt-thumb.jpg" />
+
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+
+ 
+  <!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="css/tutorial.css">
+	<link rel="stylesheet" type="text/css" href="css/feed-loader.css">
+	<style>
+
+	</style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <div class="text-center">
+	<span class='post-view' data-id='tutorial'>
+	<code><b><span class='view-load' id='postviews'></span></b> Views since March 20, 2024</code>
+	</span>
+	</div>
+
+  
+<script>
+//<![CDATA[
+document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://cdn.firebase.com/js/client/2.4.2/firebase.js\"></scr" + "ipt>");
+//]]>
+</script>	
+<script>
+    $.each($(".post-view[data-id]"), function(a, e) {
+        var l = $(e).parent().find("#postviews").addClass("view-load"),
+            i = new Firebase("https://assaef-1-default-rtdb.firebaseio.com/pages/id/" + $(e).attr("data-id"));
+        i.once("value", function(a) {
+            var n = a.val(),
+                t = !1;
+            null == n && (n = {}, n.value = 0, n.url = window.location.href, n.id = $(e).attr("data-id"), t = !0), l.removeClass("view-load").text(n.value), n.value++, "/" != window.location.pathname && (t ? i.set(n) : i.child("value").set(n.value))
+        })
+    });
+</script> 
+
+
+</body>
+</html>
+
