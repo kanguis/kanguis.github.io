@@ -162,7 +162,7 @@ input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16p
     <input type="text" class="text" id="youtubeLink" size="55" />
 </p>
 <p>
-    <button id="get" class="btn btn-danger">
+    <button id="getyt" class="btn btn-danger">
     Get YouTube Thumbnail
     </button>
 </p>
@@ -171,7 +171,7 @@ input[type=text]{background:#fff;width:auto;display:inline-block;padding:8px 16p
 
 <script type='text/javascript'>
 //<![CDATA[
-$("#get").click(function () {
+$("#getyt").click(function () {
    var ytl = $( "#youtubeLink" ).val();
    var yti = ytl.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
    $( "#msg" ).html( "<h2>YouTube Thumbnail</h2><h3>Max resolution (1080p and above):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/maxresdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/maxresdefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>HD (720p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/sddefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/sddefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>Standard quality (480p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/hqdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/hqdefault.jpg\" onclick=\"this.select()\" readonly /></p><h3>Medium (360p):</h3><p><img src=\"https://img.youtube.com/vi/" + yti[1] + "/mqdefault.jpg\" class=\"image\" /></p><p>URL : <input name=\"imageURL\" id=\"copyimageURL\" class=\"text\" size=\"55\" type=\"text\" value=\"https://img.youtube.com/vi/"+ yti[1] + "/mqdefault.jpg\" onclick=\"this.select()\" readonly /></p>" );
