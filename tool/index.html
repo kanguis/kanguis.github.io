@@ -191,6 +191,13 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
   </div>
 	</div>
 </div>
+
+<div class="py-2">
+	<div class="container text-center">
+	<iframe src="tool-view.html" height="35px" width="300px"></iframe>
+	</div>
+</div>
+
 </main>
 
 
@@ -200,9 +207,7 @@ $('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);ret
 <svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
 </div>
   </footer>
-<script>
-function toastNotif(e){var tNotif = qSel('#toastNotif'); if (tNotif != null){tNotif.innerHTML = '<span>' + e + '</span>'}}; /* fixedNotif */ function fixedNotif(e){var fNotif = qSel('#fixedNotif'); if (fNotif != null){fNotif.innerHTML = "<input class='nJs hidden' id='forFxdNtf' type='checkbox'/><div class='noJs' data-text='" + e + "'><label for='forFxdNtf'></label></div>"}}; /* neonLight */ function neonLight(e){var neonL = qSel('#neonLight'); if (neonL != null) {addCt(neonL, 'vsbl'); setTimeout(function (){remCt(neonL, 'vsbl')},e+1000)}};
-</script>
+
 
 </body>
 </html>
