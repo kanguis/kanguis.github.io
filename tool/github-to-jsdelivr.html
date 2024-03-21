@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>GitHub to jsDelivr</title>
+
+	<!-- Meta Tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Kang-Ismet.com">
+	<meta name="description" content="Tutorial Blog Kang Ismet">
+	
+	<!-- Open graph -->
+	<meta property="og:url" content="https://tutorial.kang-ismet.com" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Google Drive Direct Link Generator" />
+	<meta property="og:description" content="Tutorial Bootstrap, JavaScript, jQuery, dll " />
+	<meta property="og:image" content="https://tutorial.kang-ismet.com/img/kismt-thumb.jpg" />
+
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="../img/favicon.ico">
+
+	<!-- Google Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+
+
+ 
+  <!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="../css/tutorial.css">
+	<link rel="stylesheet" type="text/css" href="../css/feed-loader.css">
+	<style>
+	@media screen and (min-width:768px){
+::-webkit-scrollbar{-webkit-appearance:none;width:8px;height:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:rgba(0,0,0,.15);border-radius:10px}::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,.35)}::-webkit-scrollbar-thumb:active{background:rgba(0,0,0,.35)}
+}
+footer{background:#1b1b27;color:#72727f}
+footer a{color:#afafbf;text-decoration:none}
+
+.loading{left:40px;top:20px;position:absolute;}
+.container {position:relative;}
+#feed-list-container{position:relative;min-height:250px}
+
+.toTopB.vsbl {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+.toTopB {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 5;
+    transform: scale(0);
+    transition: transform .3s ease, opacity .3s ease,visibility .3s ease,margin-bottom 1s ease;
+}
+.toTopB svg .b {
+    fill: #fff;
+    stroke: #e6e6e6;
+    opacity: .9;
+}
+.toTopB svg .c {
+    fill: none;
+    stroke: #482dff;
+    stroke-dasharray: 100 100;
+    stroke-dashoffset: 100;
+    stroke-linecap: round;
+	display:none
+}
+.toTopB svg .d {
+    fill: none;
+    stroke: #08102b;
+}
+svg.line, svg .line {
+    fill: none!important;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1;
+}
+
+element.style {
+}
+.toTopB svg {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    stroke-width: 1.5;
+    cursor: pointer;
+}
+#ScrollToTop{display:none}
+.notes{background:#fff;padding:15px}
+.notes1{background:#fff;padding:10px}
+.notes ul li{line-height:1.6em;margin-bottom:8px;}
+
+.row{margin-bottom:10px}
+.form-control:disabled, .form-control[readonly] {
+    background-color: #f7f7f7;
+    opacity: 1;	
+}
+.jsDelivr, .git, .ex, .main{
+    margin: 1em 0;
+}
+.jsDelivr>img, .git>img {
+    margin: 0 0 10px;
+}
+.git .head {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0.5em;
+}
+.git .head span {
+    font-size: 1.3em;
+    font-weight: 500;
+    display: inline-block;
+    margin: 0 0 0 6px;
+	color:#333;
+}
+.form-control{border:1px solid #bfc6cb !important;}
+.form-control:hover{border-color:#5375a3 !important;}}
+.link-generate {font-family: 'Roboto Condensed', sans-serif;}
+.title {font-size: 1.4em;margin: 15px 0 10px;}
+.sub {font-size: 0.6em;color: #444;vertical-align: middle;}
+.sub a{color: #444;text-decoration:none}
+#input, #output {font-size: .9em;display:block;width:100%;padding: 8px 13px;border: 1px solid #b5b5b5;border-radius: 3px;}
+#help-text {font-weight: 600;margin: 10px;}
+.instr{background:#1a3c3b}
+
+input[type=text] {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 7px;
+    border: 1px solid #91969d;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+	letter-spacing: -.2px;
+}
+.img-center{text-align:center;margin:0 auto;}
+.img-left{clear:left;float:left;margin-bottom:1em;margin-right:1em;text-align:left;}
+.img-right{clear:right;float:right;margin-bottom:1em;margin-left:1em;text-align:right;}
+.img-border {border:1px solid #ddd}
+.img-200,.img-300,.img-400,.img-500,.img-600{width:100%;text-align:center;clear:both}
+.img-200{max-width:200px;}
+.img-300{max-width:300px;}
+.img-400{max-width:400px;}
+.img-500{max-width:500px;}
+.img-600{max-width:600px;}
+.img-caption{display: block;margin-top: 5px;font-size: small;line-height: 1.3;opacity: .6;font-style:italic}
+@media screen and (max-width:640px){
+.img-500.img-left,.img-500.img-right,.img-600.img-left,.img-600.img-right{clear:both;float:none;margin:1em auto;text-align:center;}
+}
+@media screen and (max-width:414px){
+.img-200.img-left,.img-200.img-right,.img-300.img-left,.img-300.img-right,.img-400.img-left,.img-400.img-right{clear:both;float:none;margin:1em auto;text-align:center;}
+}
+
+code {
+    font-size: 1em !important;
+    color: #333 !important;
+}
+footer{margin-bottom:-25px}
+
+#copiedmsg{
+position:fixed;
+bottom:20px;
+left:20px;
+}
+.gitcont{max-width:1100px;margin:0 auto}
+.btnz {margin-bottom:5px}
+@media screen and (max-width:570px){
+.btnz {margin-top:10px}
+}
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(function() { $(window).scroll(function() { if($(this).scrollTop()>100) { $('#ScrollToTop').fadeIn()} else { $('#ScrollToTop').fadeOut();}});
+$('#ScrollToTop').click(function(){$('html,body').animate({scrollTop:0},200);return false})});
+</script>
+</head>
+<body>
+
+<header class="navbar-light fixed-top header-static bg-mode">
+<nav class="navbar navbar-expand-lg">
+		<div class="container-fluid px-lg-5">
+		<!-- Logo START --> 
+			<a class="navbar-brand d-flex" href="https://tutorial.kang-ismet.com/tool/">
+				<img class="light-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="../img/kismt.svg" alt="logo">	
+				<span class="nav-item ms-2 fw-bold">kismt.</span></a>
+			</a>
+		<!-- Logo END -->
+		<ul class="navbar-nav navbar-nav-scroll">
+					<li class="nav-item">
+						<a class="nav-link" href="https://kang-ismet.com">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://tutorial.kang-ismet.com">Tutorial</a>
+					</li>
+		</ul>
+		</div>
+</nav>
+</header>
+
+<main class="pt-5 mb-5">
+
+<!-- Page header START -->
+  <div class="py-4" style="background-image:url(../img/bggdrive.jpg); background-position: center center; background-size: cover; background-repeat: no-repeat;">
+	<div class="container">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-6 text-center">
+        <!-- Title -->
+        <h1 class="text-white">Migrating from GitHub to jsDelivr</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Page header END -->
+
+    <div class='container'>
+	<div class='gitcont'>
+<div class='row'>
+<div class='col-lg-12 col-xl-12 col-sm-12 col-md-12'>
+	<div class='head'>
+		<p class='text-center mt-4 pt-4'>
+			<legend>
+                jsDelivr is a free, fast, and reliable Open Source CDN for npm and GitHub.
+                Most GitHub links can be easily converted to jsDelivr links.
+             </legend>
+		</p>
+	</div>
+	</div>
+<div class='main'>
+<div class='git'>
+<div class='head'>
+<img height='25' src='../img/github2.png' width='25'/>
+<span>
+                  Github
+                </span>
+</div>
+</div>
+<div class='form-group row'>
+<div class='col-lg-12 col-xl-12 col-sm-12 col-md-12'>
+<input class='form-control gitlink' id='g' placeholder='Github file URL' type='text'/>
+</div>
+</div>
+</div>
+<div class='jsDelivr'>
+<img src='../img/jsdelivr.png'/>
+<div class='form-group row'>
+<div class='col-lg-12 col-xl-12 col-sm-12 col-md-12'>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='o' placeholder='Direct link with lastest commit (long hash)' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c1' onclick="dikopi()">
+                        COPY
+                      </button>
+<button class='btn btn-primary btnz' id='t1'>
+                        TEST
+                      </button>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='r' placeholder='Direct link with lastest commit (short hash)' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c2' onclick="dikopi()">
+                        COPY
+                      </button>
+<button class='btn btn-primary btnz' id='t2'>
+                        TEST
+                      </button>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='m' placeholder='Direct link without lastest commit' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c3' onclick="dikopi()">
+                        COPY
+                      </button>
+<button class='btn btn-primary btnz' id='t3'>
+                        TEST
+                      </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='embed'>
+<span class='embed-label  mb-3'>
+<p><strong>
+                  Embedded code
+                </strong></p>
+</span>
+<div class='form-group row'>
+<div class='col-lg-12 col-xl-12 col-sm-12 col-md-12'>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='n' placeholder='Embedded code with lastest commit (long hash)' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c4' onclick="dikopi()">
+                        COPY
+                      </button>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='t' placeholder='Embedded code with lastest commit (short hash)' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c5' onclick="dikopi()">
+                        COPY
+                      </button>
+</div>
+</div>
+<div class='row'>
+<div class='col-lg-10 col-xl-10 col-sm-10 col-md-10'>
+<input class='form-control' id='p' placeholder='Embedded code without lastest commit' readonly='' type='text'/>
+</div>
+<div class='col-lg-2 col-xl-2 col-sm-2 col-md-2'>
+<button class='btn btn-success btnz' id='c6' onclick="dikopi()">
+                        COPY
+                      </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='btngroup'>
+<button class='btn btn-danger' id='x'>
+              RESET
+            </button>
+</div>
+<div class='ex'>
+<p><b>Valid Github File URL samples:</b></p>
+<ul>
+<li><code>https://github.com/kangismet/syntaxhighlighter/blob/main/css/prism/PrismLight.css</code>
+</li>
+<li><code>https://github.com/kangismet/syntaxhighlighter/raw/main/css/prism/PrismLight.css</code>
+</li>
+<li>
+<code>https://github.com/kangismet/syntaxhighlighter/blame/main/css/prism/PrismLight.css</code>
+</li>
+</ul>
+<p><b>Valid Github Raw File :</b></p>
+<ul>
+<li>
+<code>https://raw.githubusercontent.com/kangismet/syntaxhighlighter/main/css/prism/PrismLight.css</code>
+</li>
+</ul>
+</div>
+<p id="copiedmsg"></p>
+</div>
+</div>
+</main>
+
+
+
+  <footer class="pt-3 pb-1 mt-4">
+    <p class="text-center">© <span class='year'>
+</span> <a href="https://kang-ismet.com">Kang Ismet</a></p>
+	<div id="ScrollToTop" class="toTopB vsbl">
+<svg viewBox="0 0 38 38"><circle class="b" cx="17" cy="17" r="15.92"></circle><circle class="c scrollProgress" cx="17" cy="17" r="15.92" style="stroke-dashoffset: 79.6851;"></circle><path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path></svg>
+</div>
+  </footer>
+  
+<script type='text/javascript'>
+//<![CDATA[
+  const giturl = /^https?:\/\/github\.com\/(.+?)\/(.+?)\/(?!releases\/)(?:(?:blob|raw|blame)\/)?(.+?)\/(.+)/i,
+        rawgit = /^https?:\/\/raw\.github(?:usercontent)?\.com\/(.+?)\/(.+?)\/(.+?)\/(.+)/i;
+    (function(doc) {
+        doc.getElementsByClassName("gitlink")[0].focus();
+        doc.getElementsByClassName("year")[0].innerHTML = new Date().getFullYear();
+
+        var a = () => {
+            let t = doc.getElementsByClassName("gitlink")[0].value;
+            let y = t.match(giturl),
+                l = t.match(rawgit);
+
+            var n = (e, i) => {
+                doc.getElementsByClassName("gitlink")[0].classList.remove("invalid");
+                let n = `https://api.github.com/repos/${i[1]}/${i[2]}/commits/${i[3]}`;
+                fetch(n)
+                    .then(r => r.json())
+                    .then(i => {
+                        let n = i.sha,
+                            c = t.replace(e, `https://cdn.jsdelivr.net/gh/$1/$2@${n}/$4`),
+                            d = t.replace(e, `https://cdn.jsdelivr.net/gh/$1/$2/$4`),
+                            k = t.replace(e, `https://cdn.jsdelivr.net/gh/$1/$2@${n.substring(0,7)}/$4`),
+                            q = t.split("/").pop();
+                        doc.getElementById("o").value = c;
+                        doc.getElementById("m").value = d;
+                        doc.getElementById("r").value = k;
+                        if (q.indexOf(".js") != -1) {
+                            doc.getElementById("n").value = `<script src="${c}" type="text/javascript"><\/script>`;
+                            doc.getElementById("p").value = `<script src="${d}" type="text/javascript"><\/script>`;
+                            doc.getElementById("t").value = `<script src="${k}" type="text/javascript"><\/script>`;
+                        };
+                        if (q.indexOf(".css") != -1) {
+                            doc.getElementById("n").value = `<link href="${c}" rel="stylesheet" type="text/css"/>`;
+                            doc.getElementById("p").value = `<link href="${d}" rel="stylesheet" type="text/css"/>`;
+                            doc.getElementById("t").value = `<link href="${k}" rel="stylesheet" type="text/css"/>`;
+                        };
+                        if (q.indexOf(".png") != -1 || q.indexOf(".jpg") != -1 || q.indexOf(".gif") != -1 || q.indexOf(".svg") != -1 || q.indexOf(".jpeg") != -1) {
+                            doc.getElementById("n").value = `<img alt="image" src="${c}">`;
+                            doc.getElementById("p").value = `<img alt="image" src="${d}">`;
+                            doc.getElementById("t").value = `<img alt="image" src="${k}">`;
+                        };
+                    })
+                    .catch(e => console.error(e))
+            }
+            giturl.test(t) ? n(giturl, y) : rawgit.test(t) ? n(rawgit, l) : doc.getElementsByClassName("gitlink")[0].classList.add("invalid")
+        }
+
+        var b = id => {
+            doc.getElementById(id).value.length > 0 ? (doc.getElementById(id).select(), doc.execCommand("copy")) : alert("Nothing to copy !")
+        }
+
+        var c = id => {
+            doc.getElementById(id).value.length > 0 ? window.open(doc.getElementById(id).value) : (alert("Nothing to test !"))
+        }
+        doc.getElementById("x").addEventListener("click", () => {
+            doc.getElementById("g").focus();
+            let a = doc.querySelectorAll("#g,#o,#m,#n,#p,#t,#r");
+            for (let i = 0; i < a.length; i++) {
+                a[i].value = "";
+            };
+        })
+        doc.getElementById("c1").addEventListener("click", () => {
+            b("o");
+        })
+        doc.getElementById("c2").addEventListener("click", () => {
+            b("r");
+        })
+        doc.getElementById("c3").addEventListener("click", () => {
+            b("m");
+        })
+        doc.getElementById("c4").addEventListener("click", () => {
+            b("n");
+        })
+        doc.getElementById("c5").addEventListener("click", () => {
+            b("t");
+        })
+        doc.getElementById("c6").addEventListener("click", () => {
+            b("p");
+        })
+        doc.getElementById("t1").addEventListener("click", () => {
+            c("o");
+        })
+        doc.getElementById("t2").addEventListener("click", () => {
+            c("r");
+        })
+        doc.getElementById("t3").addEventListener("click", () => {
+            c("m");
+        })
+        doc.getElementById("g").addEventListener("input", a)
+    })(document);
+    //]]>
+</script>
+
+<script>
+function dikopi() {
+    document.getElementById("copiedmsg").innerHTML = "<span style='background:#666;color:#f1f1f1;padding:8px 10px;border-radius:4px;'>Copied to Clipboard</span>";
+	setTimeout(function(){ 
+      document.getElementById("copiedmsg").innerHTML = "";
+  }, 1000);
+
+}
+</script>
+</body>
+</html>
+
