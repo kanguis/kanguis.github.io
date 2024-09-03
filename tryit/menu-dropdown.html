@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+
+<style>
+body {border: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+	background:#eee;
+	}
+header {
+	background:#1b206d;
+	height:70px;
+	color:white;
+	text-align:center;
+	top:0;
+	}
+header h1 {
+	font-size:200%;
+	font-weight:700;
+	text:transform:uppercase;
+	line-height:70px;
+	margin:0 auto;
+	}	
+#menu{
+	background:#888;
+	height:45px;
+	margin:0 auto;
+	}
+#menu ul,#menu li{
+	margin:0 auto;
+	padding:0 0;
+	list-style:none
+	}
+#menu ul{
+	height:45px;
+	width:auto;
+	}
+#menu li{
+	float:left;
+	display:inline;
+	position:relative;
+	font-size:14px;
+	color:#fff;
+	font-weight:500;
+	}
+#menu a{
+	display:block;
+	line-height:45px;
+	padding:0 14px;
+	text-decoration:none;
+	color:#fff;
+	}
+#menu li a:hover {
+	color:#fff;
+	background-color:#555;
+	transition: all 0.3s ease-in;
+	}
+	
+/* Dropdown Menu */
+#menu a.sub:after{  /* Kode Panah */
+	content:'';
+	display:inline-block;
+	background-color:#fff;
+	color:#fff;
+	width:12px;
+	height:12px;
+	margin-left:10px;
+	vertical-align:-1px;
+	transition:all .3s ease;
+	background:url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7,10L12,15L17,10H7Z`' fill='%23fff'/%3E%3C/svg%3E") center / 22px no-repeat;
+}
+#menu a.sub:hover:after{ 
+	transform:rotate(180deg); /* Panah diputar saat disentuh mouse */
+}
+#menu ul.menus{ 
+	height:auto;
+	overflow:hidden;
+	width:180px;
+	background:#666;
+	position:absolute;
+	z-index:99;
+	display:none; /* Dropdown tersembunyi */
+	left:0;
+	}
+#menu ul.menus li{
+	display:block;
+	width:100%;
+	}
+#menu ul.menus a{
+	color:#fff;
+	line-height:45px;
+	}
+#menu ul.menus a:hover{
+	background:#5d99a2;
+	color:#fff;
+	}
+#menu li:hover ul.menus{
+	display:block
+}	
+</style>
+</head>
+<body>
+<header>
+	<h1>HEADER</h1>
+</header>  
+<nav id="menu">
+  <ul>
+	<li><a href="#">HOME</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Tanpa Dropdown</a>
+	<li><a class="sub" href="#">Dropdown</a>
+	  <ul class="menus">
+		<li><a href="#">Menu1</a></li>
+		<li><a href="#">Menu2</a></li>
+		<li><a href='#'>Menu3</a></li>
+	  </ul>
+	</li>	
+</nav>
+		
+</body>
+</html>
+
