@@ -310,44 +310,7 @@ span#usergetsstar {animation-name: example;animation-duration: 1s;animation-timi
   29%  {background-color:rgba(44, 156, 202, 1);color:#fff}
   50% {background-color:transparent;color:transparent}
 }
-.topnav {
-position:relative;
-z-index:2;
-font-size:17px;
-background-color: #282A35;
-color:#f1f1f1;
-width:100%;
-padding:0;
-letter-spacing:1px;
-font-family: 'Source Sans Pro', sans-serif;
-}
-.topnav a{
-padding:10px 15px 9px 15px !important;
-}
-.topnav .ki-bar a:hover,.topnav .ki-bar a:focus{
-background-color:#000000 !important;
-color:#ffffff !important;
-}
-.topnav .ki-bar a.active {
-background-color: #04AA6D!important;
-color:#ffffff;
-}
-.topnav a.topnav-icons{
-  background-color:#282A35;
-}
-a.topnav-icons {
-width:52px !important;
-font-size:20px !important;
-padding-top:11px !important;
-padding-bottom:13px !important;
-}
-a.topnav-icons.fa-home {font-size:22px !important}
-a.topnav-icons.fa-menu {font-size:22px !important}
-a.topnav-localicons {
-font-size:20px !important;
-padding-top:6px !important;
-padding-bottom:12px !important;
-}
+
 /*i.fa-caret-down,i.fa-caret-up{width:10px}*/
 #sidenav h2 {
 font-size:21px;
