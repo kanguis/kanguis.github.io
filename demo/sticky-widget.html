@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo Sticky Widget</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjsDmqD0QvHrBesw53ScXm9lnvYAL7ZSia9dyIENO5hnUmcCQhJ3-heULU8N7KH9Fu7kOM2A4VgaJPgoZg3JesGSrpmbRmiMlCeLQFXePdxfjBFXT8VQOt3eIioF5jtrE-LHbHURv8-cI5SOPQ5D_DOEg7DKTNioi0muQe0aXcds7deGvDcZsj_-c8KNIlF=s16">
+	<style>
+	.ki-bg-shade {background: linear-gradient(90deg, #851B41 0%, #6937BE 100%);}
+	.dummy{height:1.2em;margin-bottom:10px}
+	.dummy-img {height: auto;min-height: 200px;margin: 2rem 10%;}
+	.ml-10 {margin-left:10%}
+	.w-30 {width:30%}
+	.komen {display:none}
+	#widget1 {
+    background-color: #a5ea74;
+    border-radius: 0.25rem;
+    font-size: .875rem;
+    height: auto;
+    margin: 0;
+    opacity: 1;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+#widget2 {
+    background-color: #fcdb59;
+    border-radius: 0.25rem;
+    font-size: .875rem;
+    height: auto;
+    margin: 0;
+    opacity: 1;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+.sticky {
+  position:fixed;
+  top:10px;/* jarak dari atas*/
+  width:339px;
+  z-index: 100;
+}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="ki-bg-shade py-4">
+	<div class="container">
+		<h1 class="display-5 text-white text-center">Sticky Widget</h1>
+	</div>
+  </header>
+  
+  <div class="container">
+   <div class="d-lg-flex">
+	<div class="col-lg-8 px-3">
+		<p class="ml-10 mt-5 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy-img"></p>
+		<p class="ml-10 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy-img"></p>
+		<p class="ml-10 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy-img"></p>
+		<p class="ml-10 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy-img"></p>
+		<p class="ml-10 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy-img"></p>
+		<p class="ml-10 mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+    </div>
+<div class="col-lg-4 px-3 pe-3">
+	<div id="widget1" class="mt-5">Widget non-Sticky</div>
+	<div id="widget2" class="mt-3">Sticky Widget</div>
+</div>
+	</div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script type='text/javascript'>
+$(document).ready(function() {
+var stickyWidgetTop = $('#widget2').offset().top; 
+var stickyWidget = function(){
+var scrollTop = $(window).scrollTop();     
+if (scrollTop > stickyWidgetTop) { 
+    $('#widget2').addClass('sticky');
+} else {
+    $('#widget2').removeClass('sticky'); 
+}
+};
+stickyWidget();
+$(window).scroll(function() {
+    stickyWidget();
+});
+});
+</script>
+
+</body>
+</html>
