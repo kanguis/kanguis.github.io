@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Demo JWPlayer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="shortcut icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEjsDmqD0QvHrBesw53ScXm9lnvYAL7ZSia9dyIENO5hnUmcCQhJ3-heULU8N7KH9Fu7kOM2A4VgaJPgoZg3JesGSrpmbRmiMlCeLQFXePdxfjBFXT8VQOt3eIioF5jtrE-LHbHURv8-cI5SOPQ5D_DOEg7DKTNioi0muQe0aXcds7deGvDcZsj_-c8KNIlF=s16">
+	<style>
+	.ki-bg-shade {background: linear-gradient(90deg, #851B41 0%, #6937BE 100%);}
+	.dummy{height:1.2em;margin-bottom:10px}
+	.dummy-img {height: auto;min-height: 200px;margin: 2rem 10%;}
+	.ml-10 {margin-left:10%}
+	.w-30 {width:30%}
+	.komen {display:none}
+	</style>
+	<script src='https://kangismet.github.io/public/jwplayer-8-8-2.js' type='text/javascript'></script>
+</head>
+<body>
+  <header class="ki-bg-shade py-4">
+	<div class="container">
+		<h1 class="display-5 text-white text-center">JW Player Lengkap</h1>
+	</div>
+  </header>
+  
+  <div class="container">
+   <div class="d-lg-flex">
+	<div class="col-lg-8 px-3">
+		<p class="ml-10 mt-5 d-block bg-body-secondary dummy"></p>
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+		<div id='player-jw' data-video='https://kangismet.github.io/public/MPEG_TS/jayanti.m3u8' data-poster='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgV1Nx88ba18N-qbMWk6JVVJ-jKcInHK7wTuA7yn2JfBreg-Pp_Tr7zKN8vdQFJDVXOSVovWgZQMcs7Wrnkkt5XYXyBgHYp-Jaznghg6Ee1wXOzv3GOfZslGZlU2mOQ81H5YczkahAbqsDmvyLFTHcBKRtugHeCO78ZNfqFqdlqTQJBmbyzYM8n3dDFPwp2/s800/jayanti.jpg' data-logo='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil9A3H_uRew902uLOryEfuLIMOnCQYe4SbRUQwEVjjgxRpobJeoAfR_Ufp6xN1QtNp_0IyaMa3Ix_WIjZo1yhUitjK-degXk2Ro2MwX67-F33qvtNJ_5YsRADWvAS4DoMHpGBcr49bhER1ge6oS8hqAbqHmhklcgok465eDxppeXm9UCu5pWMmCx5jWBZK/s200/kismt.png' data-title='Jayanti' data-link='https://kang-ismet.com' data-caption='https://tutorial.kang-ismet.com/vid/jayanti-id.vtt' data-caption2='https://tutorial.kang-ismet.com/vid/jayanti-sn.vtt'></div>
+		<p class="ml-10 mt-3 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+		<p class="mt-1 d-block bg-body-secondary dummy"></p>
+
+		<p class="w-30 mt-1 d-block bg-body-secondary dummy"></p>
+
+    </div>
+	<div class="col-lg-4 px-3 pe-3">
+	<h4 class="mt-5 mb-3">Recent Posts</h4>
+<style scoped='' type='text/css'>
+#recent-posts{color:#999;font-size:11px}
+#recent-posts img{background:#fafafa;float:left;height:60px;margin-right:15px;width:60px;border-radius:4px}
+#recent-posts ul{margin:0;padding:0}
+#recent-posts ul li{margin:0 0 10px 0;padding:0 0 10px 0;border-bottom:1px solid rgba(0,0,0,0.1);list-style:none}
+#recent-posts ul li:last-child{border-bottom:0}
+#recent-posts ul li a{display:block;color:#222;font-weight:700;text-decoration:none;font-size:14px;margin:0 0 10px 0;line-height:normal}
+</style>
+<div id='recent-posts'>
+<script type='text/javaScript'>
+var rcp_numposts=5;
+var rcp_snippet_length=80;
+var rcp_info='yes';
+var rcp_comment='Comments';
+var rcp_disable='Review';
+function recent_posts(json){var dw='';a=location.href;y=a.indexOf('?m=0');dw+='<ul>';for(var i=0;i<rcp_numposts;i++){var entry=json.feed.entry[i];var rcp_posttitle=entry.title.$t;if('content'in entry){var rcp_get_snippet=entry.content.$t}else{if('summary'in entry){var rcp_get_snippet=entry.summary.$t}else{var rcp_get_snippet="";}};rcp_get_snippet=rcp_get_snippet.replace(/<[^>]*>/g,"");if(rcp_get_snippet.length<rcp_snippet_length){var rcp_snippet=rcp_get_snippet}else{rcp_get_snippet=rcp_get_snippet.substring(0,rcp_snippet_length);var space=rcp_get_snippet.lastIndexOf(" ");rcp_snippet=rcp_get_snippet.substring(0,space)+"&#133;";};for(var j=0;j<entry.link.length;j++){if('thr$total'in entry){var rcp_commentsNum=entry.thr$total.$t+' '+rcp_comment}else{rcp_commentsNum=rcp_disable};if(entry.link[j].rel=='alternate'){var rcp_posturl=entry.link[j].href;if(y!=-1){rcp_posturl=rcp_posturl+'?m=0'}var rcp_postdate=entry.published.$t;if('media$thumbnail'in entry){var rcp_thumb=entry.media$thumbnail.url}else{rcp_thumb="https://blogger.googleusercontent.com/img/a/AVvXsEgHSGMCyvBOqUChWccx8XpTgPPkgzWxQwmkHIemsVjPJ6J1xz7eYODIq5q7KAzYcPxPk8wX_FZwEhui_W4lIPUf3g2zYugWn4sQWEEYzkIraZg59qOV9MzCAECgaTlxJwMGseM2jTlJE6b-LSx1jg-HKkT5k1DSoXsiG69hNqRS_flSius0qIDEDg1gpP6C=s72"};}};dw+='<li>';dw+='<img alt="'+rcp_posttitle+'" src="'+rcp_thumb+'"/>';dw+='<div><a href="'+rcp_posturl+'" rel="nofollow" title="'+rcp_snippet+'">'+rcp_posttitle+'</a></div>';if(rcp_info=='yes'){dw+='<span class="tanggal">'+rcp_postdate.substring(8,10)+'/'+rcp_postdate.substring(5,7)+'/'+rcp_postdate.substring(0,4)+'</span><span class="komen"> - '+rcp_commentsNum+'</span>';};dw+='<div style="clear:both"></div></li>';};dw+='</ul>';document.getElementById('recent-posts').innerHTML=dw;};document.write('<script type=\"text/javascript\" src=\"https://kang-ismet.com/feeds/posts/default?alt=json-in-script&max-results='+rcp_numposts+'&callback=recent_posts\"><\/script>');
+</script>
+</div>
+	</div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+ <script type='text/javascript'>/*<![CDATA[*/
+  (function(a) {
+    let plyElement = a.getElementById('player-jw');
+    if (!plyElement)
+      return;
+    if (typeof jwplayer == 'function') {
+      let jw = jwplayer('player-jw');
+      jw.setup({
+        title: plyElement.dataset.title,
+        key: 'ITWMv7t88JGzI0xPwW8I0+LveiXX9SWbfdmt0ArUSyd=',
+        width: '100%',
+        aspectratio: '16:9',
+        sources: [{
+          'file': plyElement.dataset.video,
+          'type': 'video/mp4',
+        }],
+        logo: {
+          'file': plyElement.dataset.logo,
+          'link': plyElement.dataset.link,
+          'hide': 'false',
+          'position': 'top-right'
+        },
+        image: plyElement.dataset.poster,
+        tracks: [{
+          'file': plyElement.dataset.caption,
+          'label': 'Indonesia',
+          'kind': 'captions',
+          'default': 'false'
+          },
+          {
+          'file': plyElement.dataset.caption2,
+          'label': 'Sunda',
+          'kind': 'captions',
+          'default':'true'
+         }]
+      });
+    }
+  })(document);
+/*]]>*/</script>
+
+</body>
+</html>
