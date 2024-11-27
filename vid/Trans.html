@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="id-ID">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+        <title>Live Streaming - TransTV</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale = 1.0, user-scalable = no, width=device-width, height=device-height, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="description" content="Live Streaming - TransTV" />
+        <meta name="robots" content="noindex, nofollow"/>
+        <meta name="googlebot-news" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+        <meta name="dtk:acctype" content="acc-tv"/>
+        <meta name="dtk:kanalid" content="-"/>
+        <meta name="dtk:articleid" content="-"/>
+        <meta name="dtk:platform" content="desktop"/>
+        <script type="text/javascript" src="https://cdn.detik.net.id/flowplayer/jquery-1.11.2.min.js"></script>
+
+        <!--s:dtkprv-->
+<!-- S: (script) Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NG6BTJ');</script>
+<!-- E: (script) Google Tag Manager -->
+<!--e:dtkprv-->
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--s:dtkprv-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NG6BTJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--e:dtkprv-->
+
+        
+<script>
+    const video_title = "Live Streaming - TransTV"
+    const detikvideo_props = {
+    "target": "#main_live_chat",
+    "title": "Live Streaming - TransTV",
+    "autoplay": false,
+    "mute": false,
+    "live": true,
+    "imageUrl": "https://tv.detik.com/image/TransTV.jpg",
+    "channel": "livetranstv",
+    "videoUrl": "https://video.detik.com/transtv/smil:transtv.smil/playlist.m3u8",
+};
+
+    var firstPlay = false;
+    detikvideo_props.detikVideoLoadedCallback = function (player) {
+        $('.vcounter').css('visibility', 'visible');
+        detikLiveUserCounter.start();
+        player.on('play', function() {
+            if (!firstPlay) {
+              firstPlay = true;
+              detikLiveUserCounter.play();
+            }
+        });
+    };
+</script>
+
+<div id="main_live_chat"></div>
+<script src="https://cdn.detik.net.id/detikVideo/detikVideo.core.js?v=2024112711">detikvideo_props</script>
+
+
+
+    
+    <script src="https://cdn.detik.net.id/libs/livecounter/detikLiveUserCounter.js?v=2024112711"></script>
+    <script>
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function successHandler(msg) {
+            let numberFormatted = numberWithCommas(msg.count);
+            $('#counter-success').html(numberFormatted + " sedang menonton");
+        }
+
+        function errorHandler(msg) {
+            console.log('conterview status :'.msg.statusText);
+          return;
+        }
+
+        var defaultConfig = {
+            channel: '20detik-transTV',
+            successCallback: successHandler,
+            errorCallback: errorHandler,
+            requestWinPostMsg: true
+        };
+
+        detikLiveUserCounter.setConfig(defaultConfig);
+
+
+    </script>
+
+    </body>
+</html>
+<!--replaced--><!--0-->
