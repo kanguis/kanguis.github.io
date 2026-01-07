@@ -171,15 +171,15 @@ a:hover {
 </head>
 <body>
 <h1>YouTube Normal</h1>
-<div class="comment-content">
+<div class="youtube">
 https://www.youtube.com/watch?v=nn9LGhZeM_o
 </div>
 <h1>YouTube Short</h1>
-<div class="comment-content">
+<div class="youtube">
 https://youtube.com/shorts/J4JA1_YekVQ
 </div>
 <h1>YouTube Playlist</h1>
-<div class="comment-content">
+<div class="youtube">
 https://www.youtube.com/watch?v=L99lZ41Z_i0&amp;list=PLH8O0Yji9wXd0sLuvKDZECPcZGrUjDSv1
 </div>
 
@@ -190,7 +190,7 @@ https://www.youtube.com/watch?v=L99lZ41Z_i0&amp;list=PLH8O0Yji9wXd0sLuvKDZECPcZG
 // - youtu.be/VIDEO?list=PLAYLIST
 const ytRegex = /https?:\/\/(?:www\.)?(?:youtube\.com\/(?:watch\?(?:.*?&)?v=|shorts\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})(?:.*?list=([a-zA-Z0-9_-]+))?|https?:\/\/(?:www\.)?youtube\.com\/playlist\?list=([a-zA-Z0-9_-]+)/g;
 
-document.querySelectorAll('.comment-content').forEach(container => {
+document.querySelectorAll('.youtube').forEach(container => {
     const walker = document.createTreeWalker(
         container,
         NodeFilter.SHOW_TEXT,
