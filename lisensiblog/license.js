@@ -26,7 +26,7 @@
       return;
     }
 
-    var api="https://script.google.com/macros/s/AKfycbXXXX/exec";
+    var api="https://script.google.com/macros/s/AKfycbz06Xs5aKT14CPffTOYvhNWzbHiTQiKXd05PP-yxK5FXyTI-QVWXT1wFoC2mHhpVJJY/exec";
     var domain=location.hostname;
 
     fetch(api+"?license="+license+"&domain="+domain)
@@ -41,3 +41,4 @@
       });
   };
 })();
+
