@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>License JSON Output</title>
+<style>
+body {
+  font-family: monospace;
+  background: #111;
+  color: #0f0;
+  padding: 20px;
+}
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+</style>
+</head>
+<body>
+
+<h3>License JSON Output</h3>
+<pre id="json"></pre>
+
+<script>
+// ===============================
+// DATA LISENSI (SEPERTI GOOGLE SHEET)
+// ===============================
+const licenses = [
+  {
+    license: "BLG-ABC123",
+    domain: "contohblog.blogspot.com",
+    status: "active"
+  },
+  {
+    license: "BLG-XYZ789",
+    domain: "bloglain.com",
+    status: "inactive"
+  }
+];
+
+// ===============================
+// TAMPILKAN DALAM FORMAT JSON
+// ===============================
+const jsonOutput = JSON.stringify(licenses, null, 2);
+document.getElementById("json").textContent = jsonOutput;
+</script>
+
+</body>
+</html>
